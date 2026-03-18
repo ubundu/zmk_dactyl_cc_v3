@@ -1,0 +1,21 @@
+// dactyl_cc_right.overlay
+
+#include "dactyl_cc.dtsi"
+
+&default_transform {
+    // The matrix transform for this board is 6 columns over
+    // because the left half is 6 columns wide according to the matrix.
+    col-offset = <6>;
+};
+
+// TODO: Put the correct column GPIOs here.
+&kscan0 {
+    col-gpios
+        = <&gpio0 22 GPIO_ACTIVE_HIGH>  // col5 in the schematic  // GOOD
+        , <&gpio0 24 GPIO_ACTIVE_HIGH>  // col4 in the schematic  // GOOD
+        , <&gpio1 0  GPIO_ACTIVE_HIGH>  // col3 in the schematic  // 32 on the silkscreen
+        , <&gpio0 11 GPIO_ACTIVE_HIGH>  // col2 in the schematic  // GOOD
+        , <&gpio1 4  GPIO_ACTIVE_HIGH>  // col1 in the schematic  // 36 on the silkscreen
+        , <&gpio1 6  GPIO_ACTIVE_HIGH>  // col0 in the schematic  // 38 on the silkscreen
+        ;
+};

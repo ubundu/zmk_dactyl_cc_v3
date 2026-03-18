@@ -1,0 +1,6 @@
+---
+board: nice_nano_v2
+shield:
+  - dactyl_cc_left
+  - dactyl_cc_right
+  - settings_reset
