@@ -31,6 +31,7 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
+        wakeup-source;
 
         // Silkscreen pin names: pins > 32 → subtract 32 and change &gpio0 to &gpio1
         diode-direction = "col2row";
